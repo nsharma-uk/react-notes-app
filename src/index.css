@@ -12,6 +12,28 @@ code {
     monospace;
 }
 
+/* AddNote and Note.js component */
+
+.note-footer-text {
+  font-size: 12px;
+}
+
+/* AddNote component */
+
+.note.new {
+  background-color: #b2ffff;
+}
+
+textarea {
+  background-color: #b2ffff;
+  resize: none;
+  border: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
 /* in Note.js component */
 .note {
   display: flex;
