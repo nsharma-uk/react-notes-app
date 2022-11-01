@@ -1,13 +1,13 @@
 import { RiDeleteBin6Line } from "react-icons/ri";
 
-const Note = () => {
+const Note = ({ id, text, date }) => {
   return (
     <div className="note">
       <div>
-        <p>Hello this is a new note</p>
+        <p>{text}</p>
       </div>
       <div className="note-footer">
-        <p>28/10/2022</p>
+        <p>{date}</p>
         <RiDeleteBin6Line />
       </div>
     </div>

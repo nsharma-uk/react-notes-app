@@ -12,6 +12,7 @@ code {
     monospace;
 }
 
+/* in Note.js component */
 .note {
   display: flex;
   flex-direction: column;
@@ -26,11 +27,19 @@ code {
   justify-content: space-between;
   align-items: center;
 }
+/* in NotesList.js component */
 
 .notes-list {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, min-max(250px, 1fr)); */
-  /* grid-template-rows: repeat(2, 1fr); */
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 1.5rem;
+}
+
+/* in App.js */
+
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
 }
