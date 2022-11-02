@@ -9,11 +9,13 @@ const AddNote = ({ handleAddNote }) => {
 
   //handle text input
   const handleChange = (e) => {
-    console.log(e.target.value);
-    setAddText(e.target.value);
+    if (characterLimit - e.target.value.length >= 0) {
+      console.log(e.target.value);
+      setAddText(e.target.value);
+    }
   };
 
-  //handle save
+  //handle save & error
   const handleSaveClick = () => {
     if (addText.trim().length > 0) {
       handleAddNote(addText);
