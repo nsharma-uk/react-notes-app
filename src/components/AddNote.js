@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { RiSave2Line } from "react-icons/ri";
 
-const AddNote = ({ handleAddNote }) => {
+import HandleAddContext from "./UseContext/HandleAddContext";
+
+const AddNote = () => {
+  const handleAddNote = useContext(HandleAddContext);
+
   const [addText, setAddText] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
 

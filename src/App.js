@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { v4 as uuid } from "uuid";
+
 import NotesList from "./components/NotesList";
+import HandleAddContext from "./components/UseContext/HandleAddContext";
 
 const unique_id = uuid();
 const small_id = unique_id.slice(0, 8);
@@ -29,7 +31,7 @@ export const App = () => {
     },
   ]);
 
-  const addNote = (text) => {
+  const addHandleNote = (text) => {
     console.log(text);
     const date = new Date();
     const newNote = {
@@ -44,9 +46,11 @@ export const App = () => {
   };
 
   return (
-    <div className="container">
-      <NotesList notes={notes} handleAddNote={addNote} />
-    </div>
+    <HandleAddContext.Provider value={addHandleNote}>
+      <div className="container">
+        <NotesList notes={notes} />
+      </div>
+    </HandleAddContext.Provider>
   );
 };
 
