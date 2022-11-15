@@ -48,6 +48,7 @@ textarea:focus {
   padding: 0.5rem;
   min-height: 200px;
   white-space: pre-wrap;
+  word-break: break-all;
 }
 
 .note-footer {
