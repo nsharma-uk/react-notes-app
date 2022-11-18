@@ -12,7 +12,10 @@ const Note = ({ id, text, date }) => {
       </div>
       <div className="note-footer">
         <p className="note-footer-text">{date}</p>
-        <RiDeleteBin6Line onClick={() => handleDeleteNote(id)} />
+        <RiDeleteBin6Line
+          onClick={() => handleDeleteNote(id)}
+          className="note-footer-icon"
+        />
       </div>
     </div>
   );

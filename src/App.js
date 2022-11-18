@@ -1,41 +1,33 @@
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 import { v4 as uuid } from "uuid";
 
 import NotesList from "./components/NotesList";
 import HandleAddContext from "./components/UseContext/HandleAddContext";
 import HandleDeleteContext from "./components/UseContext/HandleDeleteContext";
+import { Header } from "./components/Header";
 
 const genSmallID = () => {
   return uuid().slice(0, 8);
 };
 
-const initialState = [
-  {
-    id: genSmallID(),
-    text: "This is the first note",
-    date: "12/10/22022",
-  },
-  {
-    id: genSmallID(),
-    text: "This is the 2nd note",
-    date: "15/10/22022",
-  },
-  {
-    id: genSmallID(),
-    text: "This is the 3rd note",
-    date: "16/10/22022",
-  },
-  {
-    id: genSmallID(),
-    text: "This is the 4th note",
-    date: "30/10/22022",
-  },
-];
-
 export const App = () => {
-  const [notes, setNotes] = useState(initialState);
+  const [notes, setNotes] = useState([]);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
+  //Local storage
+  useEffect(() => {
+    const savedNotes = JSON.parse(localStorage.getItem("notes-app"));
+
+    if (savedNotes) {
+      setNotes(savedNotes);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("notes-app", JSON.stringify(notes));
+  }, [notes]);
+
+  //add notes
   const addHandleNote = (text) => {
     console.log(text);
     const date = new Date();
@@ -50,6 +42,7 @@ export const App = () => {
     setNotes(newNotes);
   };
 
+  // delete notes
   const deleteNote = (id) => {
     const newNotesArray = notes.filter((note) => note.id !== id);
     setNotes(newNotesArray);
@@ -57,11 +50,17 @@ export const App = () => {
   };
 
   return (
-    <HandleAddContext.Provider value={addHandleNote}>
-      <HandleDeleteContext.Provider value={deleteNote}>
-        <NotesList notes={notes} handleDeleteNote={deleteNote} />
-      </HandleDeleteContext.Provider>
-    </HandleAddContext.Provider>
+    <div
+      style={{ minHeight: "100vh" }}
+      className={`${isDarkMode && "dark-mode"}`}
+    >
+      <HandleAddContext.Provider value={addHandleNote}>
+        <HandleDeleteContext.Provider value={deleteNote}>
+          <Header handleDarkMode={setIsDarkMode} />
+          <NotesList notes={notes} />
+        </HandleDeleteContext.Provider>
+      </HandleAddContext.Provider>
+    </div>
   );
 };
 
