@@ -1,13 +1,123 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Oxygen";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Header.js */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+}
+
+.dark-mode {
+  background-color: #000000;
+}
+
+.dark-mode h1 {
+  color: #ffffff;
+}
+
+button {
+  font-family: "Oxygen";
+  background-color: #000000;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+  color: #ffffff;
+}
+
+.dark-mode button {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.toggle:hover {
+  background-color: #838383;
+  cursor: pointer;
+}
+
+/* AddNote and Note.js component */
+
+.note-footer-text {
+  font-size: 0.8rem;
+}
+
+:is(.note-footer-icon, .save) {
+  font-size: 1.3rem;
+}
+
+:is(.note-footer-icon:hover, .note-footer-save:hover) {
+  cursor: pointer;
+  color: #838383;
+}
+
+/* AddNote component */
+
+.note.new {
+  background-color: #b2ffff;
+}
+
+textarea {
+  background-color: #b2ffff;
+  resize: none;
+  border: none;
+  font-size: 1rem;
+  font-family: Oxygen;
+  width: 100%;
+  height: 100%;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+::placeholder {
+  font-size: 0.8rem;
+  font-family: Oxygen;
+}
+
+.disabled {
+  color: #bfc1c2;
+  cursor: default;
+}
+
+/* in Note.js component */
+.note {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fcffa4;
+  padding: 0.5rem;
+  min-height: 200px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  border-radius: 3px;
+}
+
+.note-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* in NotesList.js component */
+
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+}
+
+.notes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1.5rem;
 }
