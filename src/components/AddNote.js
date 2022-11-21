@@ -7,13 +7,17 @@ const AddNote = () => {
   const handleAddNote = useContext(HandleAddContext);
 
   const [addText, setAddText] = useState("");
-  const [errorMsg, setErrorMsg] = useState("");
+  const [isDisabled, setIsDisabled] = useState(true);
 
   const characterLimit = 300;
 
   //handle text input
   const handleChange = (e) => {
-    if (characterLimit - e.target.value.length >= 0) {
+    if (characterLimit - e.target.value.length < 1) {
+      setIsDisabled(true);
+      console.log(setIsDisabled);
+    } else {
+      setIsDisabled(false);
       console.log(e.target.value);
       setAddText(e.target.value);
     }
@@ -24,14 +28,11 @@ const AddNote = () => {
     if (addText.trim().length > 0) {
       handleAddNote(addText);
       setAddText("");
-    } else {
-      setErrorMsg("Please type something to save your note");
-      console.log(setErrorMsg);
     }
   };
 
   return (
-    <div className="note new">
+    <form className="note new">
       <textarea
         rows="8"
         cols="10"
@@ -42,12 +43,18 @@ const AddNote = () => {
 
       <div className="note-footer">
         <p className="note-footer-text">
-          {characterLimit - addText.length} remaining
+          {characterLimit - addText.length} characters remaining
         </p>
-        <RiSave2Line onClick={handleSaveClick} />
-        {errorMsg && <p className="error"> {errorMsg} </p>}
+        <RiSave2Line
+          onClick={handleSaveClick}
+          id="button"
+          type="submit"
+          disabled={isDisabled}
+          className={`${isDisabled && "disabled"} ? '' : 'save'}`}
+          size="1.3rem"
+        />
       </div>
-    </div>
+    </form>
   );
 };
 

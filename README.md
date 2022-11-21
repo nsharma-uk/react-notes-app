@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# React Notes App ![MIT](https://img.shields.io/badge/License-MIT-green)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A notes app to practice React concepts such as Hooks including useContext, useState and useEffect. The user can add new notes to local storage and delete notes from LS. The user can choose light or dark mode.
 
-## Available Scripts
+[Deployed URL]()
 
-In the project directory, you can run:
+## Table of content
 
-### `npm start`
+- [Technologies](#technologies)
+- [User Story](#user-story)
+- [Screenshots of the application](#screenshots-of-the-application)
+- [Highlights and Next Steps](#highlights-and-next-steps)
+- [Contact me](#contact-me)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React
+- CSS
+- GitHub Pages
 
-### `npm test`
+##User Story
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+AS A busy user
+I WANT to be able to write and save notes
+SO THAT I can organise my thoughts and keep track of things I need to do
+```
 
-### `npm run build`
+```
+GIVEN a note-taking application
+WHEN I open React Notes App
+THEN I am presented with a landing page of a single note with a text field and a disabled save button
+WHEN I click on the text field
+THEN I enter text
+WHEN I a enter text into the field
+THEN a Save icon becomes enabled
+WHEN I click on the Save icon
+THEN the note is saved and appears on the page
+WHEN I want to delete a saved note
+THEN I can click on the delete button
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshots
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<details>
+<summary>Landing Page inc dark mode</summary>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![landing](./src/components/images/addnote.png)
+![landing](./src/components/images/darkmode-addnote.png)
 
-### `npm run eject`
+</details>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<details>
+<summary>Notes added</summary>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![added notes](./src/components/images/notes.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![added notes](./src/components/images/darkmode-notes.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+</details>
 
-## Learn More
+<details>
+<summary>Mobile view</summary>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Mobile view](./src/components/images/mobile-notes.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Mobile view](./src/components/images/mobile-darkmode.png)
 
-### Code Splitting
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+##Highlights and Next Steps
 
-### Analyzing the Bundle Size
+- This project was useful in providing more experience and familiarity of React Hooks, in particular useContext. The next React project will focus on the useReducer Hook.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- This time I used CSS to add a global style to the app. In the next React project I am going to focus on theme styles, using a ThemeProvider to bring in styles to the components.
 
-### Making a Progressive Web App
+## Contact me
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you have any questions about the portfolio, please do get in touch by contacting me via [email](mailto:nsharmauk711@gmail.com) or at [LinkedIn](https://www.linkedin.com/in/nsharma-uk).
