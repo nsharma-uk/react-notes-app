@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/react-notes-app/static/css/main.f8e48468.css",
+    "main.js": "/react-notes-app/static/js/main.7a85dc24.js",
+    "static/media/oxygen-latin-400.woff": "/react-notes-app/static/media/oxygen-latin-400.7c067dc55897f6052153.woff",
+    "static/media/oxygen-latin-700.woff": "/react-notes-app/static/media/oxygen-latin-700.52e4ecf4675b188341b8.woff",
+    "static/media/oxygen-latin-300.woff": "/react-notes-app/static/media/oxygen-latin-300.0e6d9b84335077968dfc.woff",
+    "static/media/oxygen-latin-400.woff2": "/react-notes-app/static/media/oxygen-latin-400.524a3699377c47d5639e.woff2",
+    "static/media/oxygen-latin-700.woff2": "/react-notes-app/static/media/oxygen-latin-700.952d29a100b1e79000a8.woff2",
+    "static/media/oxygen-latin-300.woff2": "/react-notes-app/static/media/oxygen-latin-300.fb807a22779fcffe9504.woff2",
+    "index.html": "/react-notes-app/index.html",
+    "main.f8e48468.css.map": "/react-notes-app/static/css/main.f8e48468.css.map",
+    "main.7a85dc24.js.map": "/react-notes-app/static/js/main.7a85dc24.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f8e48468.css",
+    "static/js/main.7a85dc24.js"
+  ]
+}
