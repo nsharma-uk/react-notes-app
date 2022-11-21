@@ -2,7 +2,7 @@
 
 A notes app to practice React concepts such as Hooks including useContext, useState and useEffect. The user can add new notes to local storage and delete notes from LS. The user can choose light or dark mode.
 
-[Deployed URL]()
+[Deployed URL](https://nsharma-uk.github.io/react-notes-app/)
 
 ## Table of content
 
